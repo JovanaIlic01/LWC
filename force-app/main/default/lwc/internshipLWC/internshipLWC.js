@@ -99,8 +99,9 @@ export default class CreateCaseForm extends NavigationMixin(LightningElement) {
     getRepairMen(repairType) {
         getRepairMen({ repairType: this.repairTypeValue })
           .then((result) => {
+            
         this.contacts = result;
-        
+
         this.showTable = true;             
         this.imageUrl=this.getImageUrl(this.contacts[0].Review__c);// ne znam kako da mu posaljem ovo jer je lista joojjjjj!!!
         })
