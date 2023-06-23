@@ -1,0 +1,102 @@
+<template>
+
+    <lightning-card title="Repair Case Report:" style="color: rgb(34, 117, 224);">
+
+        <div class="slds-var-p-around_medium">
+
+            <lightning-combobox style="color: blue;"
+                label="Room"
+                value={roomNumber}
+                placeholder="What room are you in?"
+                options={options}
+                onchange={handleRoomNumberChange}
+            ></lightning-combobox>
+
+
+            <lightning-combobox style="color: blue;"
+                name="repairType"
+                label="Repair Type"
+                placeholder="What needs to be fixed?"
+                options={repairOptions}
+                value={repairTypeValue}
+                onchange={handleRepairTypeChange}
+            ></lightning-combobox>
+
+       
+
+            <template if:true={showTable}>
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_fixed-layout">
+
+                  <thead>
+                    <tr class="slds-line-height_reset">
+                      <th class="slds-text-title_caps" scope="col">Name</th>
+                      <th class="slds-text-title_caps" scope="col">Phone Number</th>
+                      <th class="slds-text-title_caps" scope="col">Star Review</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <template for:each={contacts} for:item="contact">
+                        
+                      <tr key={contact.Id}>
+                        <td data-label="Name">{contact.Name}</td>
+                        <td data-label="Phone Number">{contact.Phone}</td>
+                        <td data-label="Star Review"><img src={imageUrl} alt="immg"></td>
+                      </tr>
+                    </template>
+                  </tbody>
+
+                </table>
+              </template>
+           
+
+            <lightning-combobox style="color: blue;"
+                name="failureCondition"
+                label="Failure Condition"
+                placeholder="How serious is it?"
+                options={conditionOptions}
+                value={failureConditionValue}
+                onchange={handlefailureConditionChange}
+            ></lightning-combobox>
+
+
+
+
+            <lightning-input
+                label="Subject for Malfunction"
+                value={malfunctionSubject}
+                placeholder="Define a Case Subject"
+                onchange={handleMalfunctionSubjectChange}
+            ></lightning-input>
+
+
+            <lightning-textarea
+                label="Description for Malfunction"
+                value={description}                  
+                title="Enter a description for the malfunction."         
+                placeholder="Describe the malfunction"
+                onchange={handleDescriptionChange}
+            ></lightning-textarea>
+
+
+            <lightning-combobox style="color: blue;"
+                label="Contact"
+                title="Find your Last Name in this list."  
+                value={selectedContactId}
+                placeholder="Select a Contact Last Name"
+                options={contactOptions}
+                onchange={handleContactChange}
+            ></lightning-combobox>
+        
+        </div>
+
+       
+
+        <div class="slds-var-m-around_medium">
+            <lightning-button variant="brand" label="Save" type="submit"  onclick={createCase}></lightning-button>
+           <lightning-button  variant="destructive-text" label="Cancel" onclick={resetForm}></lightning-button>
+        </div>
+
+    </lightning-card>
+
+</template>
