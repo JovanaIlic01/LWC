@@ -111,7 +111,7 @@ export default class CreateCaseForm extends NavigationMixin(LightningElement) {
       }
 
    //ide preko case-a jer ne moze preko formula polja sa static resource-ima :/
-   //radi mi ovo ali ne znam kako da ga pokupim
+   //radi mi ovo ali ne znam kako da ga pokupim 
      getImageUrl(review) {
         switch (review) {
         case 1:
