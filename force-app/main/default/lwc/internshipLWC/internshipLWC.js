@@ -65,7 +65,7 @@ export default class CreateCaseForm extends NavigationMixin(LightningElement) {
         return [
             { label: 'Minor Failure', value: 'Minor Failure' },
             { label: 'Serious Failure', value: 'Serious Failure' },
-            { label: 'Urgen Repair Failure', value: 'Urgen Repair Failure' },       
+            { label: 'Urgen Repair Failure', value: 'Urgen Repair Failure'},       
         ];
     }
 
