@@ -5,14 +5,10 @@ import createCase from '@salesforce/apex/CaseController.createCase';
 import getRooms from '@salesforce/apex/CaseController.getRooms';
 import getContacts from '@salesforce/apex/CaseController.getContacts';
 import getRepairMen from '@salesforce/apex/CaseController.getRepairMen';
-
-
-
-
-
-
+import internshipStyles from './internshipLWC.css'
 
 export default class CreateCaseForm extends NavigationMixin(LightningElement) {
+    static stylesheets=[internshipStyles];
     @track roomNumber = '';
     @track repairTypeValue = '';
     @track failureConditionValue='';
