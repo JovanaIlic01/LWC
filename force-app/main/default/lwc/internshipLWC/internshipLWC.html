@@ -1,10 +1,10 @@
 <template>
+  
+    <lightning-card >
+      <h1>REPAIR CASE REPORT</h1>
+        <div class="Form">
 
-    <lightning-card title="Repair Case Report:" style="color: rgb(34, 117, 224);">
-
-        <div class="slds-var-p-around_medium">
-
-            <lightning-combobox style="color: blue;"
+            <lightning-combobox 
                 label="Room"
                 value={roomNumber}
                 placeholder="What room are you in?"
@@ -13,7 +13,7 @@
             ></lightning-combobox>
 
 
-            <lightning-combobox style="color: blue;"
+            <lightning-combobox 
                 name="repairType"
                 label="Repair Type"
                 placeholder="What needs to be fixed?"
@@ -50,7 +50,7 @@
               </template>
            
 
-            <lightning-combobox style="color: blue;"
+            <lightning-combobox 
                 name="failureCondition"
                 label="Failure Condition"
                 placeholder="How serious is it?"
@@ -79,7 +79,7 @@
             ></lightning-textarea>
 
 
-            <lightning-combobox style="color: blue;"
+            <lightning-combobox 
                 label="Contact"
                 title="Find your Last Name in this list."  
                 value={selectedContactId}
@@ -92,9 +92,9 @@
 
        
 
-        <div class="slds-var-m-around_medium">
+        <div >
             <lightning-button variant="brand" label="Save" type="submit"  onclick={createCase}></lightning-button>
-           <lightning-button  variant="destructive-text" label="Cancel" onclick={resetForm}></lightning-button>
+           <lightning-button   variant="destructive-text" label="Cancel" onclick={resetForm}></lightning-button>
         </div>
 
     </lightning-card>

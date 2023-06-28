@@ -1,4 +1,59 @@
-lightning-combobox{
 
-    font-size: xx-large;
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: 500;
+    color: darkblue;
+    justify-content: center;
+    display: flex;
+    height: 10px;
+}
+
+lightning-card{
+color:grey;
+font-size: medium;
+justify-content: center;
+justify-self: center;
+align-items: center;
+
+}
+
+.Form{
+display: contents;
+justify-content: center;
+padding-bottom: 10px;
+margin-bottom: 10px;
+}
+
+lightning-combobox{
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+lightning-input{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    margin-bottom: 10px;
+}
+lightning-textarea{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    margin-bottom: 10px;
+}
+
+lightning-button{
+ padding-left: 5px;
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 500px;
+    height: 120px;
+
 }
